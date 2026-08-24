@@ -21,6 +21,10 @@ backend/vector_db/
 # 测试产物
 backend/test_results.json
 
+# 敏感文档（不上传）
+档案长版本 不精准.docx
+申报书part4.docx
+
 # IDE
 .vscode/
 .idea/
