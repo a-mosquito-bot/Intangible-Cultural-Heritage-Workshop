@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗线上体验 - 非遗工坊</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sensory.css">
+
+    <!-- model-viewer: 3D 模型交互展示（本地加载，无网络依赖） -->
+    <script type="module" src="js/model-viewer.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+    <div class="preloader">
+        <div class="flower-spinner">
+            <div class="petal"></div><div class="petal"></div>
+            <div class="petal"></div><div class="petal"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏮</span>
+                    <span class="logo-text">非遗工坊</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="database.html" class="nav-link">基础数据库</a></li>
+                    <li><a href="rag-qa.html" class="nav-link">非遗智答</a></li>
+                    <li><a href="sensory.html" class="nav-link active">非遗线上体验</a></li>
+                    <li><a href="school.html" class="nav-link">文旅预约</a></li>
+                    <li><a href="register.html" class="nav-link">新匠培育</a></li>
+                </ul>
+                <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== BANNER ===== -->
+        <section class="sensory-banner" style="background-image: url('../captures/素材2.jpeg');">
+            <div class="container">
+                <h1 class="banner-title">非遗线上体验</h1>
+                <p class="banner-subtitle">打破图文单一记录形式 &nbsp;｜&nbsp; 多维度数字化载体 &nbsp;｜&nbsp; 立体化留存非遗技艺</p>
+            </div>
+        </section>
+
+        <!-- ===== 简介 ===== -->
+        <section class="sensory-section bg-white">
+            <div class="container">
+                <p class="sensory-intro">人类对"技艺"的记忆，是程序性记忆（身体会记住）和情景性记忆（当时的环境、情绪）的复合体。传统非遗的"口传心授"恰恰是这种复合记忆的典型场景。非遗线上体验超越传统文字影像记录，从听觉、触觉、嗅觉、视觉四个维度系统采集非遗技艺的感官数据，将数据库从"技艺档案库"升级为"文化记忆科学数据库"。</p>
+            </div>
+        </section>
+
+        <!-- ===== 非遗技艺感官档案 · 可展开列表 ===== -->
+        <section class="sensory-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">技艺档案</span>
+                    <h2 class="section-title">非遗技艺 <span class="highlight">感官档案库</span></h2>
+                    <p class="sensory-intro" style="margin-top:0.8rem;">点击展开查看各技艺的多维度感官数字化记录，跳转至详细档案页了解更多。</p>
+                </div>
+                <div class="accordion-list">
+                    <!-- 1. 服装与制造 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">01</span>
+                            <span class="accordion-icon"><i class="fas fa-tshirt"></i></span>
+                            <span class="accordion-title">服装与制造</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>涵盖传统纺织、刺绣、印染、缝纫等服装制造全流程。3D纹理扫描记录丝绸、棉麻、刺绣纹样的表面质感，高清影像采集织机运转与手工缝制的工序细节，构建传统服装工艺的视觉与触觉数字化档案。</p>
+                                <a href="database.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2. 饮食与饮品 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">02</span>
+                            <span class="accordion-icon"><i class="fas fa-utensils"></i></span>
+                            <span class="accordion-title">饮食与饮品</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>收录传统酿酒、制茶、酱油酿造、豆腐制作等饮食工艺的完整工序。SPME技术采集发酵过程中酒曲、酱香、茶香等标志性气味，封装为"气味记忆瓶"；高清影像记录手工制作流程，还原传统饮食制作的感官全貌。</p>
+                                <a href="database.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3. 器物与生活工艺 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">03</span>
+                            <span class="accordion-icon"><i class="fas fa-tools"></i></span>
+                            <span class="accordion-title">器物与生活工艺</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>聚焦竹编、木作、打铁、制陶、髹漆等日常生活器物的制作工艺。3D扫描器物表面纹理与形态，压力传感器记录编织、锻打、拉坯时的力度曲线；原声采集打铁声、织机声、窑火声，还原传统工坊的真实声景与触感。</p>
+                                <a href="craft-detail.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. 美术与装饰 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">04</span>
+                            <span class="accordion-icon"><i class="fas fa-paint-brush"></i></span>
+                            <span class="accordion-title">美术与装饰</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>汇集剪纸、年画、木版水印、书法装裱、寺庙彩绘等传统美术与装饰技艺。超高清微距拍摄记录笔墨走向、刀痕深浅与色彩层次，3D建模还原壁画、彩塑的空间形态，构建传统美术的视觉数字化档案。</p>
+                                <a href="database.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5. 表演与声音 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">05</span>
+                            <span class="accordion-icon"><i class="fas fa-music"></i></span>
+                            <span class="accordion-title">表演与声音</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>采集传统戏曲唱腔、民间器乐演奏、劳动号子、说书评弹等表演类非遗的原声音频。高保真录音设备多轨采集，标注时间轴定位到具体唱段与乐器段落，通过频谱分析记录音高、节奏与音色特征，构建可检索的声音档案库。</p>
+                                <a href="database.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6. 体育与民间游艺 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">06</span>
+                            <span class="accordion-icon"><i class="fas fa-futbol"></i></span>
+                            <span class="accordion-title">体育与民间游艺</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>记录武术套路、龙舟竞渡、舞龙舞狮、踢毽子、陀螺等传统体育与游艺项目。多机位高清视频捕捉动作轨迹与身体姿态，同步采集现场呐喊声、鼓点节奏与器械碰撞声，以运动轨迹可视化和声景还原传统体育的动态美感。</p>
+                                <a href="sports-games.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7. 节庆与信俗 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">07</span>
+                            <span class="accordion-icon"><i class="fas fa-cloud-moon"></i></span>
+                            <span class="accordion-title">节庆与信俗</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>涵盖庙会、祭典、灯会、社火等传统节庆与民间信俗活动。多感官同步采集：鞭炮与锣鼓的环境声景、香火与供品的气味样本、人群流动的热力分布图、仪式流程的全景影像，构建节庆信俗的沉浸式感官档案。</p>
+                                <a href="database.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8. 医药与养生 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span class="accordion-num">08</span>
+                            <span class="accordion-icon"><i class="fas fa-leaf"></i></span>
+                            <span class="accordion-title">医药与养生</span>
+                            <span class="accordion-chevron"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>涵盖中药炮制、针灸、推拿、膏方制作、药膳烹饪等传统医药与养生技艺。SPME技术采集药材炮制过程中的气味变化（炒制焦香、蒸煮药香），高清微距记录药材形态鉴别特征与炮制火候变化，构建传统医药的多感官鉴别与传承档案。</p>
+                                <a href="database.html" class="btn btn-sm btn-primary">查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== 高校合作 ===== -->
+        <section class="sensory-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">学术合作</span>
+                    <h2 class="section-title">高校认知科学 <span class="highlight">联合研究</span></h2>
+                </div>
+                <p class="sensory-intro">与多所高校心理学及认知科学实验室合作，将多感官数据作为研究素材，探索"非遗记忆如何在大脑中编码和留存"。非遗线上体验不仅是技艺档案库，更是服务于认知科学研究的文化记忆基础设施。</p>
+                <div class="partner-logos">
+                    <div class="partner-item">
+                        <i class="fas fa-university"></i>
+                        <span>认知科学实验室</span>
+                    </div>
+                    <div class="partner-item">
+                        <i class="fas fa-brain"></i>
+                        <span>文化记忆研究</span>
+                    </div>
+                    <div class="partner-item">
+                        <i class="fas fa-flask"></i>
+                        <span>多感官实验</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 入口按钮 ===== -->
+        <section class="sensory-section bg-light">
+            <div class="container" style="text-align:center;">
+                <div class="sensory-cta-btns">
+                    <a href="database.html" class="btn btn-primary">进入基础数据库查看完整档案 <i class="fas fa-arrow-right"></i></a>
+                    <a href="index.html" class="btn btn-secondary">返回首页了解更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer enhanced-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">🏮</span>
+                        <span class="logo-text">非遗工坊</span>
+                    </a>
+                    <p class="footer-about">全国首个非遗工业技艺数字化平台 —— 存档濒危老手艺，AI智能科普，线下研学体验，培育新生代工匠。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">业务导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="database.html">基础数据库</a></li>
+                        <li><a href="rag-qa.html">非遗智答</a></li>
+                        <li><a href="school.html">研学预约</a></li>
+                        <li><a href="register.html">传承人入驻</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">政策板块</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">政府数字化补贴申报</a></li>
+                        <li><a href="#">非遗保护相关政策</a></li>
+                        <li><a href="#">SDG可持续发展专栏</a></li>
+                        <li><a href="#">非遗技艺存档公示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="school.html">学校研学合作</a></li>
+                        <li><a href="#">传承人合作入驻</a></li>
+                        <li><a href="#">政企项目对接</a></li>
+                        <li><a href="rag-qa.html">客服AI咨询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> 非遗工坊 · 非遗工业技艺数字化平台</p>
+                <div class="footer-links-bottom">
+                    <a href="#">隐私协议</a>
+                    <a href="#">非遗技艺存档公示</a>
+                    <a href="#">SDG9.3项目说明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/script.js"></script>
+    <script src="js/sensory.js"></script>
+</body>
+</html>

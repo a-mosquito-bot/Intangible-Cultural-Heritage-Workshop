@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在地非遗文旅体验 - 非遗工坊</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/school.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="flower-spinner">
+            <div class="petal"></div><div class="petal"></div>
+            <div class="petal"></div><div class="petal"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏮</span>
+                    <span class="logo-text">非遗工坊</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="database.html" class="nav-link">基础数据库</a></li>
+                    <li><a href="rag-qa.html" class="nav-link">非遗智答</a></li>
+                    <li><a href="sensory.html" class="nav-link">非遗线上体验</a></li>
+                    <li><a href="school.html" class="nav-link active">文旅预约</a></li>
+                    <li><a href="register.html" class="nav-link">新匠培育</a></li>
+                </ul>
+                <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!--  BANNER  -->
+        <!-- ============================================================ -->
+        <section class="school-banner" style="background-image: url('../captures/实体鼓.jpeg');">
+            <div class="container">
+                <h1 class="banner-title">在地非遗文旅体验</h1>
+                <p class="banner-subtitle">链接各地非遗匠人 &nbsp;｜&nbsp; 标准化线下实操课程 &nbsp;｜&nbsp; 研学团体一站式预约</p>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!--  筛选栏  -->
+        <!-- ============================================================ -->
+        <section class="school-filter">
+            <div class="container">
+                <div class="filter-row">
+                    <select class="filter-select">
+                        <option value="">选择省市</option>
+                        <option>北京</option><option>河北</option><option>山西</option>
+                        <option>浙江</option><option>江苏</option><option>安徽</option>
+                        <option>山东</option><option>江西</option><option>福建</option>
+                        <option>广东</option><option>广西</option><option>湖南</option>
+                        <option>四川</option><option>贵州</option><option>云南</option>
+                        <option>陕西</option><option>甘肃</option><option>河南</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">体验类型</option>
+                        <option>手工锻造</option>
+                        <option>竹木工艺</option>
+                        <option>传统制陶</option>
+                        <option>老式精工</option>
+                        <option>传统织造</option>
+                    </select>
+                    <button class="btn btn-primary"><i class="fas fa-search"></i> 筛选</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!--  两大平台预约：两栏并排  -->
+        <!-- ============================================================ -->
+        <section class="two-col-section">
+            <div class="container">
+                <div class="two-col-grid">
+
+                    <!-- 板块A：散客体验预约 -->
+                    <div class="col-card" id="individual">
+                        <span class="block-tag">个人体验</span>
+                        <h2>散客体验预约</h2>
+                        <p>对接各地签约非遗传承人，可预约单人次、小团体线下实操体验课程，亲身参与传统工业手艺完整流程。</p>
+                        <div class="col-tags">
+                            <span>传统手工锻造</span>
+                            <span>竹编轻工</span>
+                            <span>手工制陶</span>
+                            <span>老式手工零件加工</span>
+                            <span>传统织造</span>
+                        </div>
+                        <a href="#individual" class="btn btn-primary">浏览可预约体验项目 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- 板块B：学生研学专属通道（重点高亮） -->
+                    <div class="col-card highlight" id="student">
+                        <span class="block-tag highlight-tag">核心业务</span>
+                        <h2>学生研学专属通道</h2>
+                        <p>面向中小学、教育机构开放团体研学一站式服务。线上完成研学报名、传统文化课程预习、线下工坊实操，课程结束统一发放官方研学证书。</p>
+                        <div class="col-features">
+                            <span><i class="fas fa-book-open"></i> 非遗工业文化课</span>
+                            <span><i class="fas fa-industry"></i> 工坊实地参观</span>
+                            <span><i class="fas fa-hands"></i> 传统手艺动手实操</span>
+                            <span><i class="fas fa-certificate"></i> 研学成果认证</span>
+                        </div>
+                        <a href="#student" class="btn btn-cta">学校 / 机构研学报名入口 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!--  信任保障  -->
+        <!-- ============================================================ -->
+        <section class="trust-section" id="trust">
+            <div class="container">
+                <div class="block-header">
+                    <span class="block-tag">服务保障</span>
+                    <h2>为什么选择我们</h2>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>全部匠人官方签约认证</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>课程标准化，价格透明统一</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>支持定制单日 / 多日研学方案</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>正规研学证书可用于综合素质档案</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!--  底部咨询入口  -->
+        <!-- ============================================================ -->
+        <section class="consult-cta">
+            <div class="container">
+                <h2>需要定制团体方案或长期合作？</h2>
+                <p>政企 / 学校合作对接，专属顾问一对一服务</p>
+                <a href="register.html" class="btn btn-light">联系合作对接 <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer enhanced-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">🏮</span>
+                        <span class="logo-text">非遗工坊</span>
+                    </a>
+                    <p class="footer-about">全国首个非遗工业技艺数字化平台 —— 存档濒危老手艺，AI智能科普，线下研学体验，培育新生代工匠。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">业务导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="database.html">基础数据库</a></li>
+                        <li><a href="rag-qa.html">非遗智答</a></li>
+                        <li><a href="school.html">研学预约</a></li>
+                        <li><a href="register.html">传承人入驻</a></li>
+                        <li><a href="#">文创商城</a></li>
+                        <li><a href="#">会员中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">政策板块</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">政府数字化补贴申报</a></li>
+                        <li><a href="#">非遗保护相关政策</a></li>
+                        <li><a href="#">SDG可持续发展专栏</a></li>
+                        <li><a href="#">非遗技艺存档公示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="school.html">学校研学合作</a></li>
+                        <li><a href="#">传承人合作入驻</a></li>
+                        <li><a href="#">政企项目对接</a></li>
+                        <li><a href="rag-qa.html">客服AI咨询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> 非遗工坊 · 非遗工业技艺数字化平台 —— 保留所有权利</p>
+                <div class="footer-links-bottom">
+                    <a href="#">隐私协议</a>
+                    <a href="#">非遗技艺存档公示</a>
+                    <a href="#">SDG9.3项目说明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/script.js"></script>
+    <script src="js/school.js"></script>
+</body>
+</html>

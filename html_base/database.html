@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础数据库 - 非遗工坊</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/database.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="flower-spinner">
+            <div class="petal"></div><div class="petal"></div>
+            <div class="petal"></div><div class="petal"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏮</span>
+                    <span class="logo-text">非遗工坊</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="database.html" class="nav-link active">基础数据库</a></li>
+                    <li><a href="rag-qa.html" class="nav-link">非遗智答</a></li>
+                    <li><a href="sensory.html" class="nav-link">非遗线上体验</a></li>
+                    <li><a href="school.html" class="nav-link">文旅预约</a></li>
+                    <li><a href="register.html" class="nav-link">新匠培育</a></li>
+                </ul>
+                <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner -->
+        <section class="school-banner" style="background-image: url('../captures/铜人.jpeg'); background-position: center 20%;">
+            <div class="container">
+                <h1 class="banner-title">非遗技艺档案库</h1>
+                <p class="banner-subtitle">汇总各类传统工业手艺完整资料，支持按品类、地域快速检索查阅</p>
+            </div>
+        </section>
+
+        <!-- Filter Bar -->
+        <section class="school-filter">
+            <div class="container">
+                <div class="filter-row">
+                    <select class="filter-select" id="region-select">
+                        <option value="">按地区筛选</option>
+                        <option>北京市</option><option>天津市</option><option>上海市</option><option>重庆市</option>
+                        <option>河北省</option><option>山西省</option><option>辽宁省</option><option>吉林省</option>
+                        <option>黑龙江省</option><option>江苏省</option><option>浙江省</option><option>安徽省</option>
+                        <option>福建省</option><option>江西省</option><option>山东省</option><option>河南省</option>
+                        <option>湖北省</option><option>湖南省</option><option>广东省</option><option>海南省</option>
+                        <option>四川省</option><option>贵州省</option><option>云南省</option><option>陕西省</option>
+                        <option>甘肃省</option><option>青海省</option><option>台湾省</option>
+                        <option>内蒙古自治区</option><option>广西壮族自治区</option>
+                        <option>西藏自治区</option><option>宁夏回族自治区</option>
+                        <option>新疆维吾尔自治区</option>
+                        <option>香港特别行政区</option><option>澳门特别行政区</option>
+                    </select>
+                    <select class="filter-select" id="category-select">
+                        <option value="">按类别筛选</option>
+                        <option>01 服装与制造</option>
+                        <option>02 饮食与饮品</option>
+                        <option>03 器物与生活工艺</option>
+                        <option>04 美术与装饰</option>
+                        <option>05 表演与声音</option>
+                        <option>06 体育与民间游艺</option>
+                        <option>07 节庆与信俗</option>
+                        <option>08 医药与养生</option>
+                    </select>
+                    <button class="btn btn-primary" id="filter-btn"><i class="fas fa-search"></i> 筛选</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Database Content -->
+        <section class="shop-section">
+            <div class="container">
+                <div class="shop-container">
+                    <main class="shop-main" style="width:100%;">
+                        <div class="shop-tools">
+                            <div class="shop-info">
+                                <p>共收录 <span class="product-count" id="item-count">0</span> 项非遗技艺资料</p>
+                            </div>
+                            <div class="sort-options">
+                                <input type="text" class="filter-select" id="search-input" placeholder="搜索项目名称..." style="min-width:200px;">
+                            </div>
+                        </div>
+                        <div id="data-table">
+                            <p style="text-align:center;padding:2rem;">加载中...</p>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer enhanced-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">🏮</span>
+                        <span class="logo-text">非遗工坊</span>
+                    </a>
+                    <p class="footer-about">全国首个非遗工业技艺数字化平台 —— 存档濒危老手艺，AI智能科普，线下研学体验，培育新生代工匠。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">业务导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="database.html">基础数据库</a></li>
+                        <li><a href="rag-qa.html">非遗智答</a></li>
+                        <li><a href="school.html">文旅预约</a></li>
+                        <li><a href="register.html">传承人入驻</a></li>
+                        <li><a href="#">文创商城</a></li>
+                        <li><a href="#">会员中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">政策板块</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">政府数字化补贴申报</a></li>
+                        <li><a href="#">非遗保护相关政策</a></li>
+                        <li><a href="#">SDG可持续发展专栏</a></li>
+                        <li><a href="#">非遗技艺存档公示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="school.html">文旅预约</a></li>
+                        <li><a href="#">传承人合作入驻</a></li>
+                        <li><a href="#">政企项目对接</a></li>
+                        <li><a href="rag-qa.html">客服AI咨询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> 非遗工坊 · 非遗工业技艺数字化平台 —— 保留所有权利</p>
+                <div class="footer-links-bottom">
+                    <a href="#">隐私协议</a>
+                    <a href="#">非遗技艺存档公示</a>
+                    <a href="#">SDG9.3项目说明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/script.js"></script>
+    <script src="js/database.js"></script>
+</body>
+</html>

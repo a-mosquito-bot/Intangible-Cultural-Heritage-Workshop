@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗智答 - 非遗知识库</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- RAG Q&A CSS -->
+    <link rel="stylesheet" href="css/rag-qa.css">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="flower-spinner">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏮</span>
+                    <span class="logo-text">非遗工坊</span>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="database.html" class="nav-link">基础数据库</a></li>
+                    <li><a href="rag-qa.html" class="nav-link active">非遗智答</a></li>
+                    <li><a href="sensory.html" class="nav-link">非遗线上体验</a></li>
+                    <li><a href="school.html" class="nav-link">文旅预约</a></li>
+                    <li><a href="register.html" class="nav-link">新匠培育</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('../captures/剪纸3.jpeg');">
+        <div class="banner-overlay"></div>
+        <div class="container">
+            <h1 class="page-title">AI 非遗知识库问答</h1>
+            <p class="page-subtitle">基于平台专属非遗资料库的 RAG 智能问答系统 &mdash; 精准、可溯源、无幻觉</p>
+        </div>
+    </section>
+
+    <!-- RAG 问答主体 -->
+    <section class="qa-main-section">
+        <div class="container">
+            <div class="qa-container" style="background-image: url('../captures/bot_boarder.jpeg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
+
+
+                <!-- 顶部状态栏 -->
+                <div class="qa-header">
+                    <div class="qa-header-icon">👾</div>
+                    <div class="qa-header-info">
+                        <h3>非遗智答</h3>
+                    </div>
+                    <div class="qa-status">
+                        <span class="qa-status-dot" id="qaStatusDot"></span>
+                        <span id="qaStatusText">正在连接...</span>
+                    </div>
+                </div>
+
+                <!-- 消息区域 -->
+                <div class="qa-messages" id="qaMessages">
+                    <!-- 欢迎引导区 -->
+                    <div class="qa-welcome" id="qaWelcome">
+                        <div class="qa-welcome-icon">👾</div>
+                        <h3>你好！我是非遗智答</h3>
+                        <p>
+                            基于平台自建非遗知识库，所有回答均可溯源至数据库原始资料。
+                        </p>
+                        <div class="qa-suggestions">
+                            <span class="qa-suggestion-chip">京剧的唱腔有什么特点？</span>
+                            <span class="qa-suggestion-chip">竹编工艺最难的步骤是什么？</span>
+                            <span class="qa-suggestion-chip">广东有哪些传统手工非遗？</span>
+                            <span class="qa-suggestion-chip">景德镇瓷器怎么制作的？</span>
+                            <span class="qa-suggestion-chip">蔚县剪纸的独特之处在哪？</span>
+                            <span class="qa-suggestion-chip">想学非遗应该去哪里体验？</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部输入区 -->
+                <div class="qa-input-area">
+                    <div class="qa-input-row">
+                        <textarea
+                            id="qaInput"
+                            class="qa-input"
+                            placeholder="输入你的问题，例如：竹编工艺有哪些关键步骤？"
+                            rows="1"
+                            aria-label="输入问题"
+                        ></textarea>
+                        <button class="qa-send-btn" id="qaSendBtn" aria-label="发送">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="qa-input-hint">按 Enter 发送 · Shift+Enter 换行</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer enhanced-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">🏮</span>
+                        <span class="logo-text">非遗工坊</span>
+                    </a>
+                    <p class="footer-about">全国首个非遗工业技艺数字化平台，融合 AI 与文旅的包容性工业创新方案。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">快速导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="database.html">基础数据库</a></li>
+                        <li><a href="rag-qa.html">非遗智答</a></li>
+                        <li><a href="sensory.html">非遗线上体验</a></li>
+                        <li><a href="school.html">文旅预约</a></li>
+                        <li><a href="register.html">新匠培育</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">知识库涵盖</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">京剧（北京）</a></li>
+                        <li><a href="#">蔚县剪纸（河北）</a></li>
+                        <li><a href="#">东阳木雕（浙江）</a></li>
+                        <li><a href="#">景德镇陶瓷（江西）</a></li>
+                        <li><a href="#">端砚制作（广东）</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> 中国非遗数字化平台</li>
+                        <li><i class="fas fa-envelope"></i> ich@example.com</li>
+                        <li><i class="fas fa-globe"></i> www.ich-platform.cn</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> 非遗工坊 · 非遗工业技艺数字化平台 —— 保留所有权利</p>
+                <div class="footer-links-bottom">
+                    <a href="#">隐私协议</a>
+                    <a href="#">非遗技艺存档公示</a>
+                    <a href="#">SDG9.3项目说明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/rag-qa.js"></script>
+</body>
+</html>

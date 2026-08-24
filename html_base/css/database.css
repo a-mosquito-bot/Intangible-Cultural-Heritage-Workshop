@@ -1,0 +1,168 @@
+/* ============================================================
+   基础数据库 —— 非遗技艺档案库样式
+   ============================================================ */
+
+/* ===== BANNER ===== */
+.school-banner {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: default;
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #fff;
+}
+.school-banner:hover {
+    height: 380px;
+}
+.school-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 0;
+    transition: background 0.5s;
+}
+.school-banner:hover::before {
+    background: rgba(0,0,0,0.25);
+}
+.school-banner .container {
+    position: relative;
+    z-index: 1;
+}
+.banner-title {
+    font-family: 'Noto Sans SC', var(--heading-font);
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+    color: #fff;
+}
+.banner-subtitle {
+    font-size: 1.05rem;
+    opacity: 0.85;
+}
+
+/* ===== FILTER BAR ===== */
+.school-filter {
+    background: #fff;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+.filter-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.filter-select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: #fff;
+    min-width: 140px;
+}
+
+/* ===== DATABASE CONTENT ===== */
+.shop-section {
+    padding: 3rem 20px;
+    background: var(--light-color);
+}
+.shop-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.shop-main {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.shop-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.shop-info {
+    font-size: 1rem;
+    color: var(--gray-color);
+}
+.product-count {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+/* ===== DATA TABLE ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+.data-table thead th {
+    background: #f5f3ef;
+    color: #5a4e3c;
+    font-weight: 700;
+    padding: 0.9rem 1rem;
+    text-align: left;
+    border-bottom: 2px solid #d4c8b0;
+    white-space: nowrap;
+}
+.data-table tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0ebe0;
+    color: var(--dark-color);
+    vertical-align: top;
+}
+.data-table tbody tr:hover {
+    background: #fdfaf5;
+}
+.data-table tbody td:first-child {
+    text-align: center;
+    color: var(--gray-color);
+    font-size: 0.85rem;
+}
+
+/* ===== Footer ===== */
+.enhanced-footer {
+    background: var(--dark-color);
+    color: rgba(255,255,255,0.8);
+    padding-top: 3rem;
+}
+.enhanced-footer .footer-logo .logo-text { color: #fff; }
+.enhanced-footer .footer-about { color: rgba(255,255,255,0.6); }
+.enhanced-footer .footer-title { color: #fff; }
+.enhanced-footer .footer-links a { color: rgba(255,255,255,0.6); }
+.enhanced-footer .footer-links a:hover { color: #e9c46a; }
+.footer-links-bottom {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-links-bottom a {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+.footer-links-bottom a:hover { color: #e9c46a; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .school-banner { height: 160px; }
+    .school-banner:hover { height: 160px; }
+    .banner-title { font-size: 1.8rem; }
+    .shop-tools { flex-direction: column; align-items: flex-start; }
+    .shop-main { padding: 1rem; }
+    .data-table { font-size: 0.82rem; }
+    .data-table thead th,
+    .data-table tbody td { padding: 0.5rem 0.6rem; }
+}

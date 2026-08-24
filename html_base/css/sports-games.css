@@ -1,0 +1,504 @@
+/* ============================================================
+   体育与民间游艺 · 感官档案详情页
+   中国风装饰边框 · 视觉增强版
+   ============================================================ */
+
+/* ===== 通用装饰分隔线 ===== */
+.ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto 2rem;
+    max-width: 400px;
+    color: var(--accent-color);
+    font-size: 1rem;
+    opacity: 0.7;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+}
+.ornament-divider i {
+    font-size: 0.7rem;
+}
+
+/* ===== 体育项目卡片网格 ===== */
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sports-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        0 2px 16px rgba(0,0,0,0.04),
+        0 0 0 1px rgba(0,0,0,0.04);
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/* 外层装饰边框 */
+.sports-card::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 14px;
+    border: 1px solid rgba(233, 196, 106, 0.2);
+    z-index: 2;
+    pointer-events: none;
+    transition: border-color 0.4s;
+}
+.sports-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 12px 32px rgba(0,0,0,0.1),
+        0 0 0 1px var(--accent-color);
+}
+.sports-card:hover::before {
+    border-color: rgba(233, 196, 106, 0.6);
+}
+
+/* 卡片图片区 */
+.sports-card-img {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 图片底部渐变过渡 */
+.sports-card-img::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40px;
+    background: linear-gradient(to top, rgba(255,255,255,0.15), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+.sports-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 94, 84, 0.55) 0%,
+        rgba(26, 94, 84, 0.35) 50%,
+        rgba(26, 94, 84, 0.5) 100%
+    );
+    transition: background 0.4s;
+}
+.sports-card:hover .sports-card-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(26, 94, 84, 0.4) 0%,
+        rgba(26, 94, 84, 0.2) 50%,
+        rgba(26, 94, 84, 0.35) 100%
+    );
+}
+.sports-card-icon {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* 图标光环 */
+    filter: drop-shadow(0 0 8px rgba(233, 196, 106, 0.4));
+}
+.sports-card:hover .sports-card-icon {
+    transform: scale(1.2) translateY(-3px);
+    filter: drop-shadow(0 0 16px rgba(233, 196, 106, 0.6));
+}
+
+/* 卡片文字区 */
+.sports-card-body {
+    padding: 1.3rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    background: #fff;
+}
+.sports-card-body h3 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0ece0;
+    transition: border-color 0.3s;
+}
+.sports-card:hover .sports-card-body h3 {
+    border-bottom-color: var(--accent-color);
+}
+.sports-card-body p {
+    font-size: 0.87rem;
+    color: var(--gray-color);
+    line-height: 1.8;
+    margin: 0 0 1rem;
+    flex: 1;
+}
+
+/* 标签 */
+.sports-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: auto;
+}
+.sports-tags span {
+    display: inline-block;
+    background: linear-gradient(135deg, #f7f5f0, #fefcf7);
+    color: var(--primary-color);
+    padding: 0.25rem 0.8rem;
+    border-radius: 14px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    border: 1px solid #e8e0d0;
+    transition: all 0.3s;
+}
+.sports-card:hover .sports-tags span {
+    border-color: #d4c8a0;
+    background: linear-gradient(135deg, #fef9f0, #fdf5e6);
+}
+
+/* ===== 声景网格 ===== */
+.soundscape-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.3rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.soundscape-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #fff;
+    padding: 1.4rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid #e8e4d8;
+    border-left: 4px solid transparent;
+    transition: all 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+/* 背景水印纹 */
+.soundscape-item::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(233,196,106,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+.soundscape-item:hover {
+    border-color: #d4c8a0;
+    border-left-color: var(--accent-color);
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.06),
+        inset 0 0 0 1px rgba(233,196,106,0.1);
+    transform: translateY(-3px);
+}
+.soundscape-item:hover::after {
+    width: 90px;
+    height: 90px;
+    background: radial-gradient(circle, rgba(233,196,106,0.1) 0%, transparent 70%);
+}
+
+.sound-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fef9f3, #fdf3e0);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    border: 2px solid #f0e8d0;
+    transition: all 0.35s;
+}
+.soundscape-item:hover .sound-icon {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(233,196,106,0.15);
+    transform: scale(1.08);
+}
+
+.sound-info h4 {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    color: var(--dark-color);
+    margin: 0 0 0.35rem;
+}
+.sound-info p {
+    font-size: 0.82rem;
+    color: var(--gray-color);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== 文化价值卡片 ===== */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: #fdfaf5;
+    border: 2px solid #e8e0d0;
+    border-radius: 16px;
+    padding: 2.2rem 2rem;
+    text-align: center;
+    transition: all 0.4s;
+    position: relative;
+}
+/* 四角装饰 */
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px;
+    width: 20px; height: 20px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-radius: 4px 0 0 0;
+    transition: all 0.4s;
+}
+.value-card::after {
+    content: '';
+    position: absolute;
+    bottom: 10px; right: 10px;
+    width: 20px; height: 20px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-radius: 0 0 4px 0;
+    transition: all 0.4s;
+}
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(233,196,106,0.15);
+    border-color: var(--accent-color);
+}
+.value-card:hover::before {
+    border-top-color: var(--accent-color);
+    border-left-color: var(--accent-color);
+}
+.value-card:hover::after {
+    border-bottom-color: var(--accent-color);
+    border-right-color: var(--accent-color);
+}
+
+.value-icon {
+    font-size: 2.4rem;
+    color: var(--accent-color);
+    margin-bottom: 0.9rem;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.value-card:hover .value-icon {
+    transform: scale(1.15);
+}
+
+.value-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin: 0 0 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px dotted #e8e0d0;
+    transition: border-color 0.3s;
+}
+.value-card:hover h3 {
+    border-bottom-color: var(--accent-color);
+}
+
+.value-card p {
+    font-size: 0.88rem;
+    color: var(--gray-color);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ===== 投壶游戏区域装饰 ===== */
+.pitchpot-game-wrapper {
+    background: #fefdf9;
+    border: 2px solid #e8e0d0;
+    border-radius: 18px;
+    padding: 2rem 2rem 2.2rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+}
+/* 装饰角标 */
+.pitchpot-game-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 60px; height: 60px;
+    border-top: 3px solid var(--accent-color);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 18px 0 0 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+.pitchpot-game-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 60px; height: 60px;
+    border-bottom: 3px solid var(--accent-color);
+    border-right: 3px solid var(--accent-color);
+    border-radius: 0 0 18px 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pitchpot-game-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.game-stage {
+    border-radius: 16px;
+    border: 2px solid #e0d8c0;
+    overflow: hidden;
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.06),
+        inset 0 0 0 4px #fdfaf3;
+    background: #fdfaf5;
+    transition: border-color 0.3s;
+}
+.game-stage:focus-within {
+    border-color: var(--accent-color);
+}
+
+/* 力道条优化 */
+.power-bar-wrap {
+    border-top: 1px solid #e0d8c0;
+    background: linear-gradient(to bottom, #fefdf9, #fdfaf3);
+}
+
+.power-bar-track {
+    background: #ece8da;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* 计分板优化 */
+.game-scoreboard {
+    gap: 2rem;
+}
+.score-item {
+    background: #fff;
+    border: 1px solid #e8e0d0;
+    border-radius: 14px;
+    padding: 0.7rem 1.6rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: all 0.3s;
+}
+.score-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* ===== 简介段落边框装饰 ===== */
+.craft-intro {
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--gray-color);
+    line-height: 1.9;
+    padding: 1.5rem 2rem;
+    background: #fefdf9;
+    border: 1px solid #ece4d0;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 12px 12px 0;
+}
+
+/* ===== 返回链接优化 ===== */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+.back-link:hover {
+    color: var(--primary-dark);
+    gap: 0.8rem;
+    background: rgba(26,94,84,0.05);
+    border-color: rgba(26,94,84,0.15);
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .sports-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .sports-card-img {
+        height: 120px;
+    }
+    .sports-card-body {
+        padding: 1rem 1.1rem 1.2rem;
+    }
+    .sports-card-body h3 {
+        font-size: 1rem;
+    }
+    .sports-card-body p {
+        font-size: 0.82rem;
+    }
+
+    .soundscape-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .value-card {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .craft-intro {
+        padding: 1rem 1.2rem;
+        font-size: 0.92rem;
+    }
+
+    .pitchpot-game-wrapper {
+        padding: 1.2rem 1rem 1.5rem;
+    }
+}

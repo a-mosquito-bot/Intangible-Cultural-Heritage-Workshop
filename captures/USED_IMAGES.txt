@@ -1,0 +1,14 @@
+=== 已使用图片追踪 ===
+
+剪纸.jpeg   → 首页 Hero轮播 第1张
+剪纸2.jpeg  → 首页 Hero轮播 第2张
+实体.jpeg   → 首页 Hero轮播 第3张
+素材.jpeg   → 首页 Hero轮播 第4张
+铜人.jpeg   → 首页 板块2 Header（非遗技艺档案库）
+素材2.jpeg  → 首页 板块3 Header（AI非遗知识库问答）
+素材2.jpeg  → 首页 板块4 Header（感官数字化档案）
+实体鼓.jpeg → 首页 板块5 Header（线下研学体验服务）
+剪纸4.jpeg  → 首页 板块6 Header（新老匠人传承培育计划）
+
+=== 剩余可用 ===
+画.jpeg / 剪纸5.png / 剪纸3.jpeg

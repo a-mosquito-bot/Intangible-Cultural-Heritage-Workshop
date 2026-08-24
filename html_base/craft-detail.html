@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>器物与生活工艺 · 感官档案 - 非遗工坊</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sensory.css">
+    <link rel="stylesheet" href="css/craft-detail.css">
+
+    <!-- model-viewer: 3D 模型交互展示 -->
+    <script type="module" src="js/model-viewer.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+    <div class="preloader">
+        <div class="flower-spinner">
+            <div class="petal"></div><div class="petal"></div>
+            <div class="petal"></div><div class="petal"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏮</span>
+                    <span class="logo-text">非遗工坊</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">首页</a></li>
+                    <li><a href="database.html" class="nav-link">基础数据库</a></li>
+                    <li><a href="rag-qa.html" class="nav-link">非遗智答</a></li>
+                    <li><a href="sensory.html" class="nav-link active">非遗线上体验</a></li>
+                    <li><a href="school.html" class="nav-link">文旅预约</a></li>
+                    <li><a href="register.html" class="nav-link">新匠培育</a></li>
+                </ul>
+                <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== BANNER ===== -->
+        <section class="craft-banner" style="background-image: url('../captures/素材2.jpeg');">
+            <div class="container">
+                <span class="banner-tag">器物与生活工艺</span>
+                <h1 class="banner-title">器物感官档案</h1>
+                <p class="banner-subtitle">工序实录影像 &nbsp;｜&nbsp; 三维交互模型 &nbsp;｜&nbsp; 触觉 + 听觉数字化存档</p>
+            </div>
+        </section>
+
+        <!-- ===== 简介 ===== -->
+        <section class="craft-section bg-white">
+            <div class="container">
+                <p class="craft-intro">聚焦竹编、木作、打铁、制陶、髹漆等日常生活器物的制作工艺。以下影像资料与三维模型均来自非遗传承人工坊实地采集，完整记录传统手工艺从原料到成品的核心工序与形态细节，作为器物类感官数据库的视觉与触觉档案支撑。</p>
+                <a href="sensory.html" class="back-link"><i class="fas fa-arrow-left"></i> 返回感官档案库</a>
+            </div>
+        </section>
+
+        <!-- ===== 感官视频展示 ===== -->
+        <section class="craft-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">影像档案</span>
+                    <h2 class="section-title">非遗技艺 <span class="highlight">工序实录</span></h2>
+                    <p class="sensory-intro" style="margin-top:0.8rem;">以下视频资料来自非遗传承人工坊实地采集，完整记录传统手工艺从原料到成品的核心工序，作为感官数据库的视觉档案支撑。</p>
+                </div>
+                <div class="video-gallery">
+                    <div class="video-card">
+                        <video controls preload="metadata" poster="../captures/素材2.jpeg">
+                            <source src="../captures/show/0b02f729ef01ada44121c02f7f83077d.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <div class="video-card-info">
+                            <h4><i class="fas fa-play-circle"></i> 动物皮</h4>
+                            <p>鞣制、雕刻与染色间，藏着千年非遗手作的温度与匠魂</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <video controls preload="metadata" poster="../captures/素材2.jpeg">
+                            <source src="../captures/show/27ee7c66eaaa20e37e340641dedd6085.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <div class="video-card-info">
+                            <h4><i class="fas fa-play-circle"></i> 纸张</h4>
+                            <p>方寸红纸间，一把剪刀裁出千年民俗的吉祥纹样与乡土记忆</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <video controls preload="metadata" poster="../captures/素材2.jpeg">
+                            <source src="../captures/show/4c422b5450f493a8898bd76c52657f13.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <div class="video-card-info">
+                            <h4><i class="fas fa-play-circle"></i> 木头</h4>
+                            <p>一方木头，经刨凿雕磨，在榫卯与纹理间凝固着世代匠人的自然敬畏与营造智慧</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <video controls preload="metadata" poster="../captures/素材2.jpeg">
+                            <source src="../captures/show/777c3a3a34b624f96407ba58aa3a92b5.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <div class="video-card-info">
+                            <h4><i class="fas fa-play-circle"></i> 布料</h4>
+                            <p>一方布料，经纺染织绣，在经纬交错间承载着民族图腾的斑斓记忆与指尖传承的朴素诗篇</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <video controls preload="metadata" poster="../captures/素材2.jpeg">
+                            <source src="../captures/show/fdb99f189f557fc8ead480ff2624b818.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <div class="video-card-info">
+                            <h4><i class="fas fa-play-circle"></i> 漆</h4>
+                            <p>一层大漆，经髹涂雕绘，在时光打磨中凝结着东方美学的温润光泽与不灭匠心</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 3D 交互模型 ===== -->
+        <section class="craft-section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">3D 交互</span>
+                    <h2 class="section-title">非遗器物 <span class="highlight">三维交互展示</span></h2>
+                    <p class="sensory-intro" style="margin-top:0.8rem;">通过3D扫描与建模技术，将非遗器物以可交互的三维模型呈现。拖拽旋转、滚轮缩放，从任意角度观察工艺细节，还原触觉档案中的纹理与形态数据。</p>
+                </div>
+                <div class="model-viewer-wrapper">
+                    <model-viewer
+                        src="../captures/interactions.glb"
+                        camera-controls
+                        touch-action="pan-y"
+                        auto-rotate
+                        auto-rotate-delay="3000"
+                        rotation-per-second="30deg"
+                        interaction-prompt="auto"
+                        exposure="0.9"
+                        shadow-intensity="0.5"
+                        shadow-softness="0.6"
+                        style="width: 100%; height: 500px; border-radius: 14px; background: #4a4540;"
+                        ar
+                        ar-modes="webxr scene-viewer quick-look"
+                        camera-orbit="0deg 75deg 3m"
+                        min-camera-orbit="auto auto 0.5m"
+                        max-camera-orbit="auto auto 10m"
+                        min-field-of-view="10deg"
+                        max-field-of-view="60deg"
+                    ></model-viewer>
+                    <div class="model-controls-hint">
+                        <span><i class="fas fa-hand-pointer"></i> 拖拽旋转</span>
+                        <span><i class="fas fa-search-plus"></i> 滚轮缩放</span>
+                        <span><i class="fas fa-arrows-alt"></i> 右键平移</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer enhanced-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">🏮</span>
+                        <span class="logo-text">非遗工坊</span>
+                    </a>
+                    <p class="footer-about">全国首个非遗工业技艺数字化平台 —— 存档濒危老手艺，AI智能科普，线下研学体验，培育新生代工匠。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">业务导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="database.html">基础数据库</a></li>
+                        <li><a href="rag-qa.html">非遗智答</a></li>
+                        <li><a href="school.html">研学预约</a></li>
+                        <li><a href="register.html">传承人入驻</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">政策板块</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">政府数字化补贴申报</a></li>
+                        <li><a href="#">非遗保护相关政策</a></li>
+                        <li><a href="#">SDG可持续发展专栏</a></li>
+                        <li><a href="#">非遗技艺存档公示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul class="footer-links">
+                        <li><a href="school.html">学校研学合作</a></li>
+                        <li><a href="#">传承人合作入驻</a></li>
+                        <li><a href="#">政企项目对接</a></li>
+                        <li><a href="rag-qa.html">客服AI咨询</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> 非遗工坊 · 非遗工业技艺数字化平台</p>
+                <div class="footer-links-bottom">
+                    <a href="#">隐私协议</a>
+                    <a href="#">非遗技艺存档公示</a>
+                    <a href="#">SDG9.3项目说明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="js/script.js"></script>
+    <script src="js/sensory.js"></script>
+</body>
+</html>
